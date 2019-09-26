@@ -17,6 +17,12 @@ micronaut:
           secret:
             generator:
               secret: OIAISDlmdaldmlm234243§$§%90jqmldas
+      writer:
+        header:
+          enabled: true
+      propagation:
+        enabled: true
+        service-id-regex: "my-pantry-service-[a-z|-]*"
 datasources:
   default:
     url: ${JDBC_URL:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
